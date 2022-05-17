@@ -61,7 +61,7 @@ export default function MonthlyScatter() {
         <VictoryChart
                 theme={VictoryTheme.material}
                 height={400}
-                width={550}
+                width={700}
                 domainPadding={40}
                 >
                     <VictoryScatter
@@ -72,7 +72,7 @@ export default function MonthlyScatter() {
                         bubbleProperty="y"
                         maxBubbleSize={15}
                         minBubbleSize={5}
-                        labels={({ datum }) => `$${datum.y} on ${datum.x}th`}
+                        labels={({ datum }) => `₹${datum.y} on ₹${datum.x}th`}
                         labelComponent={<VictoryTooltip/>}
                         data={plot}
                         domain={{x: [0, 31]}}
@@ -81,14 +81,14 @@ export default function MonthlyScatter() {
                       textAnchor="middle"
                       style={{ fontSize: 14, fill: '#8b8b8b' }}
                       x={270} y={390}
-                      text={`day of month`}
+                      text={`Day of month`}
                     />
                     <VictoryLabel
                       textAnchor="middle"
                       style={{ fontSize: 14, fill: '#8b8b8b' }}
-                      x={6} y={190}
+                      x={55} y={190}
                       angle = {270} 
-                      text={`Amount ($)`}
+                      text={`Amount (₹)`}
                     />
                 </VictoryChart> 
         </div>
